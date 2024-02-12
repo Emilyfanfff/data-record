@@ -1,0 +1,28 @@
+/* darkmode */
+.gradientBackgroud {
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgb(76, 76, 76), rgb(86, 112, 140));
+  overflow-y: auto;
+  position: fixed;
+}
+
+/* change black to white */
+.logoHomepage,
+.logo > a,
+.returnbutton > a,
+.colorscheme > a {
+  color: white;
+}
+
+.patientname_pages {
+  color: white;
+}
+
+form {
+  color: white;
+}
+
+form div {
+  color: black;
+}

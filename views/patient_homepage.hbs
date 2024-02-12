@@ -1,0 +1,85 @@
+<div class="gradientBackgroud">
+    <div class="logo">
+
+        <b>
+            Diabetes@Home
+        </b>
+    </div>
+      <div class="colorscheme">
+            <!-- change customer light mode and dark mode -->
+            <a href="">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </a>
+        </div>
+    <!-- name and the ranking medal -->
+    <div class="nameHomepage">
+        <b>
+            {{#with patient}}
+            <a href="/patient/{{this._id}}/personal_detail"
+                style="color:black">
+                <span style="color:black"> {{this.first_name}}</span>
+            </a>
+
+            <a>
+                {{#if (overEighty this.percentage)}}
+                    <!-- <i class="fas fa-medal medalyellow"></i> -->
+                    <i class="fas fa-medal medal medalyellow">
+                        <div class="explain">
+                            If your engagement rate is over 80%, it will become a golden medal.
+                        </div>
+                    </i>
+                {{else}}
+                    <i class="fas fa-medal medal medalgrey">
+                        <div class="explain">
+                            If your engagement rate is over 80%, it will become a golden medal.
+                        </div>
+                    </i>
+                {{/if}}
+            </a>
+            {{/with}}
+        </b>
+    </div>
+
+    <!-- button to pages -->
+    {{#with patient}}
+    <a href="/patient/{{this._id}}/record">
+        {{/with}}
+
+        <div class="dataHomepage">
+            <b>
+                Record Data
+            </b>
+        </div>
+    </a>
+     {{#with patient}}
+    <a href="/patient/{{this._id}}/recordhistory">
+        {{/with}}
+        <div class="historyHomepage">
+            <b>
+                Record History
+            </b>
+        </div>
+    </a>
+     {{#with patient}}
+    <a href="/patient/{{this._id}}/leaderboard">
+        {{/with}}
+        <div class="leaderboardHomepage">
+            <b>
+                Leaderboard
+            </b>
+        </div>
+    </a>
+    <!-- message box writed from client -->
+    <div class="messageboxHomepage">
+        <div class="messageboxHomepage_title">
+            <b>
+                Message Box
+            </b>
+        </div>
+        {{#with patient}}
+            <div class="messageboxHomepage_content">
+                {{this.message}}
+            </div>
+        {{/with}}
+    </div>
+</div>

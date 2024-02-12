@@ -1,0 +1,80 @@
+<div class="gradientBackgroud">
+    <div class="returnbutton">
+        {{#with patient}}
+        <a href="/patient/{{this._id}}/homepage">
+            {{/with}}
+            <b>
+                <i class="fas fa-angle-left"></i>
+            </b>
+        </a>
+    </div>
+    <div class="logo">
+        {{#with patient}}
+        <a href="/patient/{{this._id}}/homepage">
+            {{/with}}
+            <b>
+                Diabetes@Home
+            </b>
+        </a>
+    </div>
+    <div class="colorscheme">
+            <!-- change customer light mode and dark mode -->
+            <a href="">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </a>
+    </div>
+    <!-- set the personal detail -->
+    <form action="" method="post">
+        {{#with patient}}
+        <div class="personalFirstName">
+            First name
+            <br><br>
+            <input readonly class="inputPersonalFirstName" type="text" placeholder={{this.first_name}}>
+        </div>
+        <div class="personalLastName">
+            Last name
+            <br><br>
+            <input readonly class="inputPersonalLastName" type="text" placeholder={{this.last_name}}>
+        </div>
+        Screen Name
+        <br><br>
+        <input class="inputPersonalScreenName" type="text" name="screen">
+        <br><br><br>
+        <!-- email will be lock and can not be changed, but still showed to user -->
+        Email
+        <br><br>
+        <input readonly class="inputPersonalEmail" type="email" placeholder={{this.email}}>
+        {{/with}}
+        <br><br><br>
+        <!-- 
+            Date of birth can choose from the table of website, 
+            and the language is follow to the browser setting 
+        -->
+        Date of Birth
+        <span class="datefont">
+            (YYYY/MM/DD)
+        </span>
+        <br><br>
+        <input class="inputPersonalEmail" type="date" name="dob">
+        <br><br><br>
+        {{#with patient}}
+        A Brief Text Bio
+        <br><br>
+        <textarea class="inputTextBio" cols="30" rows="10" placeholder={{this.brief}} name="brief"></textarea>
+        <br><br><br><br>
+        <input class="savePersonalDetail" type="submit" value="Save" >
+        <!-- set the personal detail -->
+        
+        <a href="/patient/{{this._id}}/resetpassword">
+            <div class="resetpasswordPersonalDetail" style="line-height: 40px;">
+                Reset Password
+            </div>
+        </a>
+        {{/with}}
+        <a href="/patient/logout">
+                <div class="signout">
+                    Sign out
+                </div>
+        </a>
+    </form>
+</div>

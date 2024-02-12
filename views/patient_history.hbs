@@ -1,0 +1,99 @@
+<div class="gradientBackgroud">
+        <div class="returnbutton">
+            {{#with patient}}
+            <a href="/patient/{{this._id}}/homepage">
+                <b>
+                    <i class="fas fa-angle-left"></i>
+                </b>
+            </a>
+        </div>
+        <div class="logo">
+            <a href="/patient/{{this._id}}/homepage">
+                <b>
+                    Diabetes@Home
+                </b>
+            </a>
+            {{/with}}
+        </div>
+        <div class="colorscheme">
+            <!-- change customer light mode and dark mode -->
+            <a href="">
+                <i class="fa-solid fa-circle-half-stroke"></i>
+            </a>
+        </div>
+        <div class="searchingbar">
+            <form action="" method="post">
+                <i class="fa-solid fa-magnifying-glass"></i>
+                <input class="date" type="date" name = "date">
+                <input class="search_button" type="submit" >
+                <div class="datatable">
+                    <br>
+                    {{#if notFound}}
+                        <div>Blood Glucose Level:
+                            <div><span class="highlight">-</span> nmol/L</div>
+                        </div>
+                        <div>Weight:
+                            <div><span class="">-</span> kg</div>
+                        </div>
+                        <div>Dose Number:
+                            <div><span class="highlight">-</span></div>
+                        </div>
+                        <div>Exercise:
+                            <div><span class="">-</span> steps</div>
+                        </div>
+                    {{else}}
+                            <div>Blood Glucose Level:
+                        {{#with todayData}}
+                            {{#if (beFilled this.bgl) }}
+                            <div><span class="highlight">
+                                {{this.bgl}}
+                            </span> nmol/L</div>
+                            {{else}}
+                                <div><span class="highlight">
+                                    -
+                                </span> nmol/L</div>
+                            {{/if}}
+                        </div>
+                        <div>Weight:
+                            {{#if (beFilled this.weight) }}
+                            <div><span class="">
+                                {{this.weight}}
+                            </span> kg</div>
+                            {{else}}
+                                <div><span class="">
+                                -
+                                </span> kg</div>
+                            {{/if}}
+                        </div>
+                        <div>Dose Number:
+                            {{#if (beFilled this.dn) }}
+                            <div><span class="highlight">
+                                {{this.dn}}
+                            </span>times</div>
+                            {{else}}
+                            <div><span class="">
+                                -
+                                </span> times</div>
+                            {{/if}}
+                        </div>
+                        <div>Exercise:
+                            {{#if (beFilled this.exercise) }}
+                            <div><span class="">
+                                {{this.exercise}}
+                            </span> steps</div>
+                            {{else}}
+                            <div><span class="">
+                                -
+                                </span> steps</div>
+                            {{/if}}
+                        </div>
+                        {{/with}}
+
+                    {{/if}}
+                </div>
+                <a href="./patient_graph.html">
+                    <input class="graphview" type="button" value="Graph View">
+                </a>
+            </form>
+        </div>
+    </div>

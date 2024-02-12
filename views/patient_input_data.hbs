@@ -1,0 +1,55 @@
+{{#if (isBgl exactPage)}}
+<form method="post" action="">
+    Blood Glucose Level
+    <br><br>
+    <input class="inputData" type="number" name="data" autocomplete="off" autofocus>
+    nmol/L
+    <br><br>
+    Comment
+    <br><br>
+    <textarea name="Comment" class="inputComment" cols="30" rows="10"></textarea>
+    <input class="save_bloodgucoselevel save" type="submit" value="Save">
+</form>
+{{else}}
+{{#if (isWeight exactPage)}}
+<form method="post" action="">
+    Weight
+    <br><br>
+    <input class="inputData" type="number" name="data" autocomplete="off" autofocus>
+    Kg
+    <br><br>
+    Comment
+    <br><br>
+    <textarea name="Comment" class="inputComment" cols="30" rows="10"></textarea>
+    <input class="save_bloodgucoselevel save" type="submit" value="Save">
+</form>
+{{else}}
+{{#if (isDn exactPage)}}
+<form method="post" action="">
+    Dose number
+    <br><br>
+    <input class="inputData" type="number" name="data" autocomplete="off" autofocus>
+    times
+    <br><br>
+    Comment
+    <br><br>
+    <textarea name="Comment" class="inputComment" cols="30" rows="10"></textarea>
+    <input class="save_bloodgucoselevel save" type="submit" value="Save">
+</form>
+{{else}}
+{{#if (isExercise exactPage)}}
+<form method="post" action="">
+    Exercise
+    <br><br>
+    <input class="inputData" type="number" name="data" autocomplete="off" autofocus>
+    Steps
+    <br><br>
+    Comment
+    <br><br>
+    <textarea name="Comment" class="inputComment" cols="30" rows="10"></textarea>
+    <input class="save_bloodgucoselevel save" type="submit" value="Save">
+</form>
+{{/if}}
+{{/if}}
+{{/if}}
+{{/if}}

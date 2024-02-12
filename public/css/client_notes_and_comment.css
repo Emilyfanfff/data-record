@@ -1,0 +1,26 @@
+.mainbox {
+  display: flex;
+}
+
+.list {
+  width: 90%;
+  height: 800px;
+  margin: 0px auto;
+  box-sizing: border-box;
+  overflow-y: scroll;
+}
+
+.list > div {
+  width: 100%;
+  height: 300px;
+  margin-bottom: 20px;
+  padding: 20px;
+  box-sizing: border-box;
+  background-color: white;
+  border-radius: 12px;
+  font-size: 30px;
+  box-shadow: inset 5px 5px 5px rgba(0, 0, 0, 0.4);
+  overflow-y: auto;
+  text-align: justify;
+  word-break: break-word;
+}

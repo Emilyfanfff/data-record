@@ -1,0 +1,17 @@
+/* Height Collapse Solving */
+
+/* 
+clearfix类
+    需手动添加
+*/
+/* 
+clearfix
+    同时解决高度塌陷，外边距重叠问题
+    直接使用clearfix样式解决
+*/
+.clearfix::before,
+.clearfix::after {
+  content: "";
+  display: table;
+  clear: both;
+}

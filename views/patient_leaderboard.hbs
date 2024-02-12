@@ -1,0 +1,109 @@
+<div class="gradientBackgroud">
+    <div class="returnbutton">
+        {{#with patient}}
+        <a href="/patient/{{this._id}}/homepage">
+            {{/with}}
+            <b>
+                <i class="fas fa-angle-left"></i>
+            </b>
+        </a>
+    </div>
+    <div class="logo">
+        {{#with patient}}
+        <a href="/patient/{{this._id}}/homepage">
+            {{/with}}
+            <b>
+                Diabetes@Home
+            </b>
+        </a>
+    </div>
+    <div class="colorscheme">
+        <!-- change customer light mode and dark mode -->
+        <a href="">
+            <i class="fa-solid fa-circle-half-stroke"></i>
+        </a>
+    </div>
+    <div class="rankingboard">
+        <div class="rank">
+            Rank
+        </div>
+        {{#with firstRank}}
+            <div class="firstplace">
+                {{#if this.exist}}
+                <i class="fa-solid fa-crown gold"></i>
+                <sapn class="rankname">{{this.first_name}}</sapn>
+                <span>{{this.percentage}}%</span>
+                {{else}}
+                    <i class="fa-solid fa-crown gold"></i>
+                    <sapn class="rankname">-</sapn>
+                    <span>-</span>
+                {{/if}}
+            </div>
+        {{/with}}
+        
+        <div class="secondplace">
+            {{#with secondRank}}
+                {{#if this.exist}}
+                <i class="fa-solid fa-crown silver"></i>
+                <sapn class="rankname">{{this.first_name}}</sapn>
+                <span>{{this.percentage}}%</span>
+                {{else}}
+                 <i class="fa-solid fa-crown copper"></i>
+                <sapn class="rankname">-</sapn>
+                <span>-</span>
+                {{/if}}
+            {{/with}}
+        </div>
+        
+        <div class="thirdplace">
+            {{#with thirdRank}}
+                {{#if this.exist}}
+                    <i class="fa-solid fa-crown" style="color: rgb(132, 45, 5);"></i>
+                    <span class="rankname">{{this.first_name}}</span>
+                    <span>{{this.percentage}}%</span>
+                {{else}}
+                    <i class="fa-solid fa-crown" style="color: rgb(132, 45, 5);"></i>
+                    <span class="rankname">-</span>
+                    <span>-</span>
+                {{/if}}
+            {{/with}}
+        </div>
+        <div class="forthplace">
+            {{#with fourthRank}}
+                {{#if this.exist}}
+                    <span>4.</span>
+                    <span class="rankname">{{this.first_name}}</span>
+                    <span>{{this.percentage}}%</span>
+                {{else}}
+                    <span>4.</span>
+                    <span class="rankname">-</span>
+                    <span>-</span>
+                {{/if}}
+            {{/with}}
+        </div>
+        <div class="fifthplace">
+            {{#with fifthRank}}
+                {{#if this.exist}}
+                    <span>5.</span>
+                    <span class="rankname">{{this.first_name}}</span>
+                    <span>{{this.percentage}}%</span>
+                {{else}}
+                    <span>5.</span>
+                    <span class="rankname">-</span>
+                    <span>-</span>
+                {{/if}}
+            {{/with}}
+        </div>
+        
+        <div class="rank">
+            You
+        </div>
+        <div class="yourplace">
+            {{#with patient}}
+                <span>EG</span>
+                <span class="rankname">{{this.screenName}}</span>
+                <span>{{this.percentage}}%</span>
+            {{/with}}
+        </div>
+    </div>
+</div>

@@ -1,0 +1,130 @@
+.searchingbar {
+  display: flex;
+  justify-content: center;
+  overflow: hidden;
+}
+
+form {
+  width: 87.73%;
+  max-width: 850px;
+  margin: 0px auto;
+  font-size: 24px;
+  line-height: 16px;
+}
+
+.date {
+  width: 53%;
+  max-width: 350px;
+}
+
+.search_button {
+  background-color: rgb(65, 65, 255);
+  border-color: transparent;
+  color: white;
+  font-weight: bolder;
+  width: 33.3%;
+  max-width: 230px;
+}
+
+.date,
+.search_button {
+  border-radius: 12px;
+}
+
+.search_button:hover {
+  text-decoration: underline;
+}
+
+.datatable {
+  width: 100%;
+  height: 400px;
+  box-sizing: border-box;
+  border-radius: 12px;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.3);
+  border: 1px black solid;
+  background-color: white;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  padding-top: 1%;
+}
+
+.datatable div {
+  font-size: 28px;
+  font-weight: bolder;
+  padding-left: 3%;
+  padding-right: 6%;
+  height: 100px;
+}
+
+.datatable div div {
+  width: 100%;
+  font-size: 35px;
+  line-height: 60px;
+  text-align: right;
+}
+
+.graphview {
+  width: 100%;
+  font-size: 30px;
+  border-radius: 12px;
+  background-color: rgb(65, 65, 255);
+  color: white;
+  box-sizing: border-box;
+  border: transparent;
+  font-weight: bolder;
+  margin-top: 140px;
+  box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.4);
+}
+
+.graphview:hover {
+  text-decoration: underline;
+}
+
+.highlight {
+  color: red;
+}
+
+@media screen and (min-height: 900px) {
+  form i,
+  .date,
+  .search_button {
+    font-size: 33px;
+  }
+  .graphview {
+    font-size: 37px;
+    height: 55px;
+    line-height: 55px;
+  }
+  form > * {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+}
+
+@media screen and (min-height: 1000px) {
+  .datatable div {
+    font-size: 35px;
+  }
+  .datatable div div {
+    font-size: 40px;
+  }
+  .graphview {
+    margin-top: 240px;
+    font-size: 40px;
+    height: 70px;
+    line-height: 70px;
+  }
+}
+
+@media screen and (min-width: 800px) {
+  .searchingbar > input {
+    margin-left: 20px;
+  }
+}
+
+@media screen and (min-width: 850px) {
+  form {
+    width: 63%;
+  }
+}
